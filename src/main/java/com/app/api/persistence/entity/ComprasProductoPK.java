@@ -6,12 +6,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
-public class ComprasProductoPK implements Serializable{
+public class ComprasProductoPK implements Serializable {
 
-    @Column (name = "id_compra")
+    @Column(name = "id_compra")
     private Integer idCompra;
 
-    @Column (name = "id_producto")
+    @Column(name = "id_producto")
     private Integer idProducto;
 
     public Integer getIdCompra() {
@@ -30,5 +30,4 @@ public class ComprasProductoPK implements Serializable{
         this.idProducto = idProducto;
     }
 
-    
 }
