@@ -5,11 +5,12 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
+import com.app.api.domain.repository.ProductRepository;
 import com.app.api.persistence.crud.ProductoCrudRepository;
 import com.app.api.persistence.entity.Producto;
 
 @Repository
-public class ProductoRepository {
+public class ProductoRepository implements ProductRepository{
     private ProductoCrudRepository productoCrudRepository;
 
     public List<Producto> getAll(){
