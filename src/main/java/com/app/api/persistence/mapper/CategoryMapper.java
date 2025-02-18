@@ -10,15 +10,14 @@ import com.app.api.persistence.entity.Categoria;
 
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
-
-        @Mappings({
+    @Mappings({
             @Mapping(source = "idCategoria", target = "categoryId"),
             @Mapping(source = "descripcion", target = "category"),
-            @Mapping(source = "estado", target = "active")
-        })
-        Category toCategory(Categoria categoria);
+            @Mapping(source = "estado", target = "active"),
+    })
+    Category toCategory(Categoria categoria);
 
-        @InheritInverseConfiguration
-        @Mapping(target = "productos", ignore = true)
-        Categoria toCategoria(Category category);
+    @InheritInverseConfiguration
+    @Mapping(target = "productos", ignore = true)
+    Categoria toCategoria(Category category);
 }
