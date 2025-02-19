@@ -6,6 +6,5 @@ import lombok.Data;
 public class Category {
     private int categoryId;
     private String category;
-    private Boolean Active;
- 
+    private boolean Active;
 }
