@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.app.api.persistence.entity.Producto;
 
 public interface ProductoCrudRepository extends CrudRepository<Producto, Integer> {
-    List<Producto> findByIdCategoriaOrderByAsc(int idCategoria);
-    Optional<List<Producto>> finByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
+    List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
+    Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
 
 }
